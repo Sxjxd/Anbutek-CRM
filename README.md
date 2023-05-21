@@ -1,2 +1,2 @@
 # CRM-Project
-Laravel CRM for SSP Module Assessment
+Laravel CRM for Server Side Programming (Module Assesment)
