@@ -1,2 +1,3 @@
-# CRM-Project
-Laravel CRM for Server Side Programming (Module Assesment)
+# ANBUTEK - CRM Project
+Server Side Programming (Module Assesment)
+Implementing CRM for a Gaming & Audio store using Laravel Jetstream/Blade
