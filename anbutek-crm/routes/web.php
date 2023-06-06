@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,4 +30,27 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::get('admin/dashboard','App\Http\Controllers\HomeController@index');
+Route::get('admin/dashboard', [HomeController::class, 'index'])->name('admin.dashboard');
+
+Route::post('user/register', [UserController::class, 'register']);
+
+Route::get('admin/AppUsers', [UserController::class, 'getRegisteredUsers']);
+
+Route::delete('/customers/{id}', [UserController::class, 'destroy'])->name('customers.destroy');
+
+
+Route::get('/admin/dashboard', [HomeController::class, 'dashboard'])->name('admin.dashboard');
+
+// Products
+
+Route::get('/admin/products', [ProductController::class, 'index'])->name('admin.products.index');
+
+Route::get('/admin/products/create', [ProductController::class, 'create'])->name('admin.products.create');
+
+Route::post('/admin/products', [ProductController::class, 'store'])->name('admin.products.store');
+
+Route::get('/admin/products/{id}/edit', [ProductController::class, 'edit'])->name('admin.products.edit');
+
+Route::delete('/admin/products/{id}', [ProductController::class, 'destroy'])->name('admin.products.destroy');
+
+Route::put('/admin/products/{id}', [ProductController::class, 'update'])->name('admin.products.update');

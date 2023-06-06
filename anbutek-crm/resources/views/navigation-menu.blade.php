@@ -5,23 +5,23 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="">
+                    <a href="/admin/dashboard">
                         <img src="{{ asset('images/logo.png') }}" alt="Logo" class="block h-9 w-auto">
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link href="" :active="request()->routeIs('dashboard')">
+                    <x-nav-link href="/admin/dashboard" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    {{-- <x-nav-link href="{{ route('Orders') }}" :active="request()->routeIs('Orders')">
-                        {{ __('Orders') }}
+                    <x-nav-link href="/admin/AppUsers" :active="request()->routeIs('AppUsers')">
+                        {{ __('User Management') }}
                     </x-nav-link>
-                    <x-nav-link href="{{ route('Inventory') }}" :active="request()->routeIs('Inventory')">
+                    <x-nav-link href="/admin/products" :active="request()->routeIs('products.index')">
                         {{ __('Inventory') }}
                     </x-nav-link>
-                    <x-nav-link href="{{ route('Analytics') }}" :active="request()->routeIs('Analytics')">
+                    {{-- <x-nav-link href="{{ route('Analytics') }}" :active="request()->routeIs('Analytics')">
                         {{ __('Analytics') }}
                     </x-nav-link>
                     <x-nav-link href="{{ route('Reviews') }}" :active="request()->routeIs('Reviews')">
