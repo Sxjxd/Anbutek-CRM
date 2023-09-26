@@ -1,6 +1,7 @@
 <?php
 
 
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Api\UserController;
@@ -8,7 +9,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\InventoryController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\OrderHistoryController;
-use App\Http\Livewire\AnalyticsDashboard;
+use App\Http\Controllers\Api\FeedbackController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,10 @@ use App\Http\Livewire\AnalyticsDashboard;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/dev', function () {
+    (new \App\Models\User())->first()->notify((new \App\Notifications\OrderConfirmationNotification()));
 });
 
 Route::middleware([
@@ -69,7 +74,14 @@ Route::middleware([
 
     Route::get('/admin/order-history/{customerId}', [OrderHistoryController::class, 'show'])->name('admin.order-history.show');
 
-    Route::get('/admin/analytics', AnalyticsDashboard::class)->name('admin.analytics.index');
+
+    Route::get('admin/feedback', [FeedbackController::class, 'getFeedback']);
+
+    Route::middleware(['auth'])->group(function () {
+        Route::get('/admin/analytics', function () {
+            return view('admin.analytics.index');
+        })->name('admin.analytics.index');
+    });
 
 
 

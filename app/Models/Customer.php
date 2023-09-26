@@ -21,4 +21,18 @@ class Customer extends Model
         'phone_number',
         'address',
     ];
+
+    public static function customerData($groupByDate = false)
+    {
+        $query = static::selectRaw('DATE(created_at) as date, COUNT(*) as customer_count')
+            ->groupBy('date')
+            ->orderBy('date', 'ASC');
+
+        if ($groupByDate) {
+            return $query->get()->keyBy('date');
+        }
+
+        return $query->get();
+    }
+
 }

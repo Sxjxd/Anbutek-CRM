@@ -28,17 +28,25 @@
                 User Management
             </a>
         </li>
-        <!-- Add more navigation links as needed -->
+
         <li>
             <a href="/admin/analytics" class="block items-center px-4 py-2 hover:bg-gray-700 {{ request()->routeIs('analytics.index') ? 'bg-gray-700' : '' }}">
                 <i class="fas fa-chart-line fa-fw text-xl mr-2"></i> <!-- icon for Analytics (Line Chart) -->
                 Analytics
             </a>
         </li>
+
         <li>
             <a href="/admin/orders" class="block items-center px-4 py-2 hover:bg-gray-700 {{ request()->routeIs('orders.index') ? 'bg-gray-700' : '' }}">
                 <i class="fas fa-shopping-bag fa-fw text-xl mr-2"></i>
                 Order Management
+            </a>
+        </li>
+
+        <li>
+            <a href="/admin/feedback" class="block items-center px-4 py-2 hover:bg-gray-700 {{ request()->routeIs('admin.feedback.index') ? 'bg-gray-700' : '' }}">
+                <i class="fas fa-comments fa-fw text-xl mr-2"></i> <!-- Icon for Customer Feedback -->
+                Customer Feedback
             </a>
         </li>
     </ul>

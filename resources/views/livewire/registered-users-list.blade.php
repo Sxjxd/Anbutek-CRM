@@ -1,9 +1,7 @@
 <div x-data="{ searchTerm: '', filterOptions: { showAll: true, showFirstName: true, showLastName: true, showEmail: true, showPhoneNumber: true, showAddress: true } }">
     <!-- Search Bar -->
     <div class="mt-4 mb-4 relative">
-        <label>
-            <input x-model="searchTerm" type="text" class="border rounded-lg pl-10 pr-4 py-2 w-80 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Search Customer Name">
-        </label>
+        <input x-model="searchTerm" type="text" class="border rounded-lg pl-10 pr-4 py-2 w-80 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Search Customer Name">
         <div class="absolute top-0 left-2 flex items-center h-full">
             <i class="fas fa-search text-gray-400"></i>
         </div>
@@ -55,16 +53,7 @@
                     <td class="px-4 py-3" x-show="filterOptions.showPhoneNumber">{{ $customer->phone_number }}</td>
                     <td class="px-4 py-3" x-show="filterOptions.showAddress">{{ $customer->address }}</td>
                     <td class="px-4 py-3">
-                        <button
-                            x-on:click="
-                                customerToRemove = {{ $customer->id }};
-                                if (window.confirm('Are you sure you want to remove this customer?')) {
-                                    removeCustomer({{ $customer->id }});
-                                } else {
-                                    customerToRemove = null;
-                                }"
-                            class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mr-2"
-                        >
+                        <button wire:click="removeCustomer({{ $customer->id }})" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mr-2">
                             Remove
                         </button>
                         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">

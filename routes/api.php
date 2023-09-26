@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Api\OrderApiController;
+use App\Http\Controllers\Api\FeedbackController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -30,11 +32,17 @@ Route::post('/user/register', [\App\Http\Controllers\Api\UserController::class, 
  Route::put('/products/{id}', [ProductController::class, 'update']);
  Route::delete('/products/{id}', [ProductController::class, 'destroy']);
 
+// Orders routes
+Route::post('orders/create', [OrderApiController::class, 'create']);
+Route::get('orders', [OrderApiController::class, 'fetch']);
+
+// Feedback routes
+Route::post('/feedback', [FeedbackController::class, 'store']);
+Route::put('/feedback/{id}/status', [FeedbackController::class, 'updateStatus']);
+Route::delete('/feedback/{id}', [FeedbackController::class, 'destroy']);
 
 
 
- Route::post('orders/create', [OrderApiController::class, 'create']);
- Route::get('orders', [OrderApiController::class, 'fetch']);
 
 
 

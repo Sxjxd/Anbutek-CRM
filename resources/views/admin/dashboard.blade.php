@@ -67,7 +67,7 @@
                     </div>
                     <div class="ml-4">
                         <p class="text-gray-500">Total Orders</p>
-                        <p class="font-bold text-2xl">23</p>
+                        <p class="font-bold text-2xl">{{ $orderCount }}</p>
                     </div>
                 </div>
             </div>
@@ -80,7 +80,8 @@
                     </div>
                     <div class="ml-4">
                         <p class="text-gray-500">Total Complaints</p>
-                        <p class="font-bold text-2xl">5</p>
+                        <p class="font-bold text-2xl">{{ $complaintCount }}</p>
+
                     </div>
                 </div>
             </div>
@@ -93,7 +94,7 @@
                     </div>
                     <div class="ml-4">
                         <p class="text-gray-500">Total Inquiries</p>
-                        <p class="font-bold text-2xl">8</p>
+                        <p class="font-bold text-2xl">{{ $inquiryCount }}</p>
                     </div>
                 </div>
             </div>
@@ -106,7 +107,7 @@
                     </div>
                     <div class="ml-4">
                         <p class="text-gray-500">Total Feedbacks</p>
-                        <p class="font-bold text-2xl">12</p>
+                        <p class="font-bold text-2xl">{{ $feedbackCount }}</p>
                     </div>
                 </div>
             </div>
