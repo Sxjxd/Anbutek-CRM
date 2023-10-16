@@ -1,22 +1,24 @@
-# Anbutek CRM System
+# E-Commerce CRM System
 
-![Project Image 1](image1_url)
-![Project Image 2](image2_url)
-
+![ANBUTEK-LOGO](crmLogo.png)
 
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Report](#project-report)
 3. [Features](#features)
 4. [Technologies Used](#technologies-used)
-5. [Installation](#installation)
-6. [License](#license)
+5. [Prerequisites](#prerequisites)
+6. [Installation](#installation)
+7. [License](#license)
 
 ## Introduction
 Welcome to the Anbutek CRM System, a comprehensive solution designed for managing customer relationships and enhancing business productivity at Anbutek, an Audio & Gaming Store with a mobile application for e-commerce. This system addresses the challenges faced by Anbutek in customer management, product tracking, and revenue analysis.
 
+![Project Image 1](crm-dashboard.png)
+
+
 ## Project Report
-[SSP - Project Report (Word Document)](https://docs.google.com/document/d/1pBbgyVGRW-0vslhdn1WDmNztyceHdHQD/edit?usp=sharing&ouid=116508383828404552386&rtpof=true&sd=true)
+[SSP - Project Report (View Word Document)](https://docs.google.com/document/d/1pBbgyVGRW-0vslhdn1WDmNztyceHdHQD/edit?usp=sharing&ouid=116508383828404552386&rtpof=true&sd=true)
 
 ## Features
 - **Dashboard**: User-friendly interface providing key business metrics and insights.
@@ -34,6 +36,12 @@ Welcome to the Anbutek CRM System, a comprehensive solution designed for managin
 - AlpineJS
 - Livewire
 
+## Prerequisites
+Before you begin, ensure you have met the following requirements:
+- PHP 7.4 or higher
+- Composer
+- Node.js and NPM
+- MySQL
 
 ## Installation
 
@@ -54,8 +62,4 @@ To install and set up the Anbutek CRM System, follow these steps:
     npm install
     npm run dev
 
-You are all set up and good to go now! Happy coding!
-    
-
-## License
-The Anbutek CRM System is open-source software, licensed under the [MIT License](insert-link-to-MIT-license).
+You are all set and good to go now! Happy coding!
