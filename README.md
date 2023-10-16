@@ -1,5 +1,9 @@
 # Anbutek CRM System
 
+![Project Image 1](image1_url)
+![Project Image 2](image2_url)
+
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Report](#project-report)
@@ -12,7 +16,7 @@
 Welcome to the Anbutek CRM System, a comprehensive solution designed for managing customer relationships and enhancing business productivity at Anbutek, an Audio & Gaming Store with a mobile application for e-commerce. This system addresses the challenges faced by Anbutek in customer management, product tracking, and revenue analysis.
 
 ## Project Report
-[Link to your project report Word document](insert-link-here)
+[SSP - Project Report (Word Document)](https://docs.google.com/document/d/1pBbgyVGRW-0vslhdn1WDmNztyceHdHQD/edit?usp=sharing&ouid=116508383828404552386&rtpof=true&sd=true)
 
 ## Features
 - **Dashboard**: User-friendly interface providing key business metrics and insights.
@@ -29,6 +33,7 @@ Welcome to the Anbutek CRM System, a comprehensive solution designed for managin
 - Tailwind CSS
 - AlpineJS
 - Livewire
+
 
 ## Installation
 
