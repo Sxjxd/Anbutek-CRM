@@ -9,7 +9,6 @@
 4. [Technologies Used](#technologies-used)
 5. [Prerequisites](#prerequisites)
 6. [Installation](#installation)
-7. [License](#license)
 
 ## Introduction
 Welcome to the Anbutek CRM System, a comprehensive solution designed for managing customer relationships and enhancing business productivity at Anbutek, an Audio & Gaming Store with a mobile application for e-commerce. This system addresses the challenges faced by Anbutek in customer management, product tracking, and revenue analysis.
